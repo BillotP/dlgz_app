@@ -4,6 +4,9 @@
 [![forthebadge](https://forthebadge.com/images/badges/certified-yourboyserge.svg)](https://github.com/BillotP)
 [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://delegationz.fly.dev)
 
+
+<a href="https://delegationz.fly.dev"><img src="https://i.ibb.co/ByTgjVq/2023-07-01-T13-16-48-321376297-02-00.png" alt="2023-07-01-T13-16-48-321376297-02-00" border="0"></a>
+
 ## Developing
 
 Once you've installed dependencies with `pnpm i`, start a development server:
