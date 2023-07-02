@@ -27,3 +27,13 @@ pnpm build
 ```
 
 You can preview the production build with `pnpm preview`.
+
+## Tracking
+
+To track application behavior, sentry is included.
+
+## Analytics
+
+To see who and when people visit this app, analaytics are available at (plausible/delegationz)[https://plausible.io/delegationz.fly.dev] or emebed below "via" PostHog
+
+<iframe width="100%" height="400" frameborder="0" allowfullscreen src="https://app.posthog.com/embedded/nSDF9ZPBg5PoVq7nRb8oMvus6gzdxg"></iframe>

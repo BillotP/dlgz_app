@@ -33,7 +33,7 @@
 </script>
 
 <div class="hero is-fullheight-with-navbar">
-  <div class="hero is-primary">
+  <div class="hero is-small is-primary">
     <div class="hero-body">
       <span>
         <h1 class="title">Tezos Delegation Events</h1>
