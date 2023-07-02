@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"ship": "vite build --mode fly && cp -r build ../delegationz/out && cd ../delegationz && fly deploy",
+		"build:fly": "vite build --mode fly",
+		"ship": "vite build --mode fly && cp -r build ../delegationz/pkg/services/frontend && cd ../delegationz && fly deploy",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
@@ -22,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sentry/sveltekit": "^7.57.0",
 		"bulma": "^0.9.4",
 		"d3-scale": "^4.0.2",
 		"layercake": "^7.6.0",

@@ -23,7 +23,6 @@
         `${host}/xtz/delegations?page=${params.page}&limit=${params.limit}&year=${params.year}`
       );
       res = await bdy.json();
-      console.log(res);
       loading = false;
     } catch (err) {
       console.error(err);

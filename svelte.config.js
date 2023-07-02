@@ -18,11 +18,13 @@ const config = {
       fallback: undefined,
       precompress: false,
       strict: true,
+      fallback: "index.html",
     }),
     prerender: {
       handleHttpError: ({ path, _, message }) => {
-        // ignore deliberate link to shiny 404 page
+        // ignore deliberate link to api
         if (String(path).startsWith("/xtz") || String(path) === "/health") {
+          console.log("Ignored ", path)
           return;
         }
 
