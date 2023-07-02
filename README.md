@@ -30,8 +30,8 @@ You can preview the production build with `pnpm preview`.
 
 ## Tracking
 
-To track application behavior, sentry is included.
+To track application behavior, sentry sdk is included with GlitchTip ingester.
 
 ## Analytics
 
-To see who and when people visit this app, analytics are available at (plausible/delegationz)[https://plausible.io/delegationz.fly.dev] and [PostHog](https://app.posthog.com/shared/nSDF9ZPBg5PoVq7nRb8oMvus6gzdxg)
+To see who and when people visit this app, analytics are available at [plausible/delegationz](https://plausible.io/delegationz.fly.dev) and [PostHog](https://app.posthog.com/shared/nSDF9ZPBg5PoVq7nRb8oMvus6gzdxg)
