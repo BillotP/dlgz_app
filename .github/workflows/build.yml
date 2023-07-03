@@ -1,11 +1,5 @@
 on:
   push:
-    # branches:
-    #   - main
-    # paths:
-    #   - src/**
-    #   - package.json
-    #   - .github/**
     tags:
       - "*"
 
@@ -64,7 +58,7 @@ jobs:
         with:
           folder: dist
       - name: Zip everything
-        run: zip -r "dlgz_app_spa_${{ github.ref_name }}.zip" dist/
+        run: cd dist && zip -r "../dlgz_app_spa_${{ github.ref_name }}.zip" .
       - name: Release app
         uses: softprops/action-gh-release@v1
         with:
