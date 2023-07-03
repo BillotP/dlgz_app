@@ -6,6 +6,8 @@ on:
       - src/**
       - package.json
       - .github/**
+    tags:
+      - "*"
 
 jobs:
   build:
@@ -50,8 +52,7 @@ jobs:
           echo "TAG=$LAST_TAG" >> $GITHUB_ENV
       - name: Release
         uses: softprops/action-gh-release@v1
-        # if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          tag_name: ${{ env.TAG }}
           files: |
             build/*
