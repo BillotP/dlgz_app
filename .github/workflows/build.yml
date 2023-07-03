@@ -55,7 +55,7 @@ jobs:
       - name: Display structure of downloaded files dist
         run: ls -R
       - name: Zip everything
-        run: zip -r "dlgz_app_spa_${{ github.ref_name }}.zip" dist
+        run: zip -r "dlgz_app_spa_${{ github.ref_name }}.zip" dist/
       - name: Release app
         uses: softprops/action-gh-release@v1
         with:
