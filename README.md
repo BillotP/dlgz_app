@@ -1,6 +1,6 @@
 # DLGZ App [Delegationz](https://github.com/BillotP/delegationz) API Frontend
 
-> [![.github/workflows/main.yml](https://github.com/BillotP/dlgz_app/actions/workflows/main.yml/badge.svg)](https://github.com/BillotP/dlgz_app/actions/workflows/main.yml)
+> [![.github/workflows/build.yml](https://github.com/BillotP/dlgz_app/actions/workflows/build.yml/badge.svg)](https://github.com/BillotP/dlgz_app/actions/workflows/build.yml)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-hipsters.svg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 [![forthebadge](https://forthebadge.com/images/badges/certified-yourboyserge.svg)](https://github.com/BillotP)
