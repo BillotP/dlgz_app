@@ -51,10 +51,13 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
+          path: path
       - name: Display structure of downloaded files
         run: ls -R
+      - name: Zip everything
+        run: zip -r "dlgz_app_spa_${{ github.ref_name }}.zip"
       - name: Release app
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            build/**
+            *.zip
