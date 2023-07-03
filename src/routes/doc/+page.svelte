@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { PUBLIC_API_HOST } from "$env/static/public";
 </script>
 
@@ -101,9 +102,9 @@
             <p class="title">HTML/CSS/JS... /*</p>
             <p class="subtitle">Load this application</p>
             <figure class="image is-4by3">
-           <a href="/">
+           <a href="{base}/">
 
-             <img alt="app logo" src="/android-chrome-512x512.png" />
+             <img alt="app logo" src="{base}/android-chrome-512x512.png" />
            </a>  
             </figure>
           </article>

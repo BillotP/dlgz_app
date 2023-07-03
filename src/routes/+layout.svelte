@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { base } from '$app/paths';
   import "../app.css";
   onMount(() => {
     // Get all "navbar-burger" elements
@@ -29,7 +30,7 @@
 
 <nav class="navbar is-fixed-top is-primary">
   <div class="navbar-brand">
-    <a href="/" class="navbar-item">
+    <a href="{base}/" class="navbar-item">
       <span class="icon">
         <i style="font-weight: 900;">🥖</i>
       </span>
@@ -48,9 +49,9 @@
   </div>
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/"> Home </a>
+      <a class="navbar-item" href="{base}/"> Home </a>
 
-      <a class="navbar-item" href="/doc"> Documentation </a>
+      <a class="navbar-item" href="{base}/doc"> Documentation </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <span class="navbar-link"> More </span>
@@ -81,7 +82,8 @@
           <p class="control">
             <a
               class="button is-secondary"
-              href="https://github.com/BillotP/delegationz"
+              target="_blank"
+              href="https://github.com/BillotP/dlgz_app"
             >
               <span class="icon">
                 <i class="fab fa-github" />
