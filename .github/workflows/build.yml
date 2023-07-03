@@ -35,7 +35,7 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
-          name: build
+          name: dist
           path: build/*
 
   release:
@@ -50,12 +50,12 @@ jobs:
       - name: Download artifact result from build step
         uses: actions/download-artifact@v3
         with:
-          name: build
-          path: path
-      - name: Display structure of downloaded files
+          name: dist
+          path: dist
+      - name: Display structure of downloaded files dist
         run: ls -R
       - name: Zip everything
-        run: zip -r "dlgz_app_spa_${{ github.ref_name }}.zip"
+        run: zip -r "dlgz_app_spa_${{ github.ref_name }}.zip" dist
       - name: Release app
         uses: softprops/action-gh-release@v1
         with:
