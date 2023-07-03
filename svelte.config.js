@@ -20,11 +20,14 @@ const config = {
       strict: true,
       fallback: "index.html",
     }),
+    paths: {
+      base: process.env.BASE_PATH ?? "",
+    },
     prerender: {
       handleHttpError: ({ path, _, message }) => {
         // ignore deliberate link to api
         if (String(path).startsWith("/xtz") || String(path) === "/health") {
-          console.log("Ignored ", path)
+          console.log("Ignored ", path);
           return;
         }
 
