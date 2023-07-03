@@ -22,7 +22,10 @@ jobs:
         with:
           fetch-depth: 0
       - name: Get tags
-        run: git fetch --tags origin
+        run: |
+          git fetch -t
+          git describe --tags --abbrev=0
+
       - uses: pnpm/action-setup@v2
         with:
           version: 8
