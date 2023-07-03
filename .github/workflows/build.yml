@@ -37,9 +37,9 @@ jobs:
           name: build
           path: build/*
       - name: Set Tag name
-          run: |
-            LAST_TAG=$(git describe --tags --abbrev=0)
-            echo "TAG=$LAST_TAG" >> $GITHUB_ENV
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0)
+          echo "TAG=$LAST_TAG" >> $GITHUB_ENV
       - name: Release
         uses: softprops/action-gh-release@v1
         # if: startsWith(github.ref, 'refs/tags/')
