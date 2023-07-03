@@ -14,21 +14,12 @@ jobs:
     name: build static app
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      packages: write
+      contents: read
     env:
       SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       PUBLIC_API_HOST: "https://delegationz.fly.dev"
     steps:
       - uses: actions/checkout@v3
-      #   with:
-      #     fetch-depth: 0
-      # - uses: actions/checkout@v2
-      # - run: git fetch --prune --unshallow --tags
-      # - name: Get tags
-      #   run: |
-      #     git describe --tags --abbrev=0
-
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -46,13 +37,24 @@ jobs:
         with:
           name: build
           path: build/*
-      # - name: Set Tag name
-      #   run: |
-      #     LAST_TAG=$(git describe --tags --abbrev=0)
-      #     echo "TAG=$LAST_TAG" >> $GITHUB_ENV
-      - name: Release
+
+  release:
+    name: create tagged release
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [build]
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: Download artifact result from build step
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Release app
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            build/*
+            build/**
