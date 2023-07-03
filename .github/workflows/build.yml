@@ -12,7 +12,7 @@ jobs:
     env:
       SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       PUBLIC_API_HOST: "https://delegationz.fly.dev"
-      BASE_PATH: /dlgz_app
+      # BASE_PATH: /dlgz_app
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
