@@ -2,12 +2,17 @@ on:
   push:
     branches:
     - main
-    
+
 jobs:
   build:
     name: build static app
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: read
+      packages: write
+    env:
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      PUBLIC_API_HOST: "https://delegationz.fly.dev"
     steps:
      - uses: actions/checkout@v3
      - uses: pnpm/action-setup@v2
@@ -22,3 +27,7 @@ jobs:
        run: pnpm install
      - name: Build SPA
        run: pnpm build:fly
+     - name: Upload a Build Artifact
+       uses: actions/upload-artifact@v3.1.2
+       with:
+        path: build/*
