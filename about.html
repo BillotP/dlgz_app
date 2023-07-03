@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      defer
+      data-domain="delegationz.fly.dev"
+      src="https://plausible.io/js/script.js"
+    ></script>
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                });
+            }
+            ((p = t.createElement("script")).type = "text/javascript"),
+              (p.async = !0),
+              (p.src = s.api_host + "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+                p,
+                r
+              );
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return (
+                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                  );
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_PxhtNaIGvRdk1GKy111HDZNS3Ramj2vgnPWlKvmev1G", {
+        api_host: "https://app.posthog.com",
+      });
+    </script>
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="./_app/immutable/assets/0.827af337.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.4f995098.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.b95eede2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.512c0267.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.bca9dc3f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.43618fd1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.2fb6fab6.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.c68f83d0.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.6a6731ed.js"><title>Delegationz</title><!-- HEAD_svelte-u4bpu9_START --><!-- HEAD_svelte-u4bpu9_END -->
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">   <nav class="navbar is-fixed-top is-primary" data-svelte-h="svelte-1qbu9mx"><div class="navbar-brand"><a href="/" class="navbar-item"><span class="icon"><i style="font-weight: 900;">🥖</i></span></a> <span role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span></span></div> <div id="navbarBasicExample" class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/doc">Documentation</a> <div class="navbar-item has-dropdown is-hoverable"><span class="navbar-link">More</span> <div class="navbar-dropdown"><a class="navbar-item" target="_blank" href="https://github.com/BillotP">Contact</a> <hr class="navbar-divider"> <a class="navbar-item" target="_blank" href="https://github.com/BillotP/delegationz/issues">Report an issue</a></div></div></div> <div class="navbar-end"><div class="navbar-item"><div class="field is-grouped"><p class="control"><a class="button is-secondary" href="https://github.com/BillotP/delegationz"><span class="icon"><i class="fab fa-github"></i></span> <span>Repo</span></a></p></div></div></div></div></nav> <div class="hero is-primary" data-svelte-h="svelte-dq5t38"><div class="hero-body"><h1 class="title">About</h1></div></div> 
+			
+			<script>
+				{
+					__sveltekit_17giigt = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {"PUBLIC_API_HOST":"https://delegationz.fly.dev"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.4f995098.js"),
+						import("./_app/immutable/entry/app.bca9dc3f.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

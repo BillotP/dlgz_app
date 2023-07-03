@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      defer
+      data-domain="delegationz.fly.dev"
+      src="https://plausible.io/js/script.js"
+    ></script>
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                });
+            }
+            ((p = t.createElement("script")).type = "text/javascript"),
+              (p.async = !0),
+              (p.src = s.api_host + "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+                p,
+                r
+              );
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return (
+                    "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                  );
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_PxhtNaIGvRdk1GKy111HDZNS3Ramj2vgnPWlKvmev1G", {
+        api_host: "https://app.posthog.com",
+      });
+    </script>
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+		<link href="./_app/immutable/assets/0.827af337.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.4f995098.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.b95eede2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.512c0267.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.bca9dc3f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.43618fd1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.2fb6fab6.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.c68f83d0.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.6223149a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/public.a3e6d84f.js"><title>Delegationz</title><!-- HEAD_svelte-u4bpu9_START --><!-- HEAD_svelte-u4bpu9_END -->
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">   <nav class="navbar is-fixed-top is-primary" data-svelte-h="svelte-1qbu9mx"><div class="navbar-brand"><a href="/" class="navbar-item"><span class="icon"><i style="font-weight: 900;">🥖</i></span></a> <span role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span></span></div> <div id="navbarBasicExample" class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/doc">Documentation</a> <div class="navbar-item has-dropdown is-hoverable"><span class="navbar-link">More</span> <div class="navbar-dropdown"><a class="navbar-item" target="_blank" href="https://github.com/BillotP">Contact</a> <hr class="navbar-divider"> <a class="navbar-item" target="_blank" href="https://github.com/BillotP/delegationz/issues">Report an issue</a></div></div></div> <div class="navbar-end"><div class="navbar-item"><div class="field is-grouped"><p class="control"><a class="button is-secondary" href="https://github.com/BillotP/delegationz"><span class="icon"><i class="fab fa-github"></i></span> <span>Repo</span></a></p></div></div></div></div></nav> <div class="hero is-small is-primary" data-svelte-h="svelte-19txyca"><div class="hero-body"><h1 class="title">Application Documentation</h1> <p class="subtitle">CONTENT-TYPE  endpoint</p></div></div> <div class="column" style="max-height: 80vh;overflow-y:scroll"><div class="tile is-ancestor"><div class="tile is-vertical is-8"><div class="tile"><div class="tile is-parent is-vertical"><article class="tile is-child notification is-info"><h3 class="title">JSON <a target="_blank" href="https://delegationz.fly.dev/xtz/delegations">/xtz/delegations</a></h3> <p class="subtitle" data-svelte-h="svelte-1x80efx">Get the last delegations made on the Tezos network</p> <div class="columns"><div class="column"><p class="has-text-left mb-2" data-svelte-h="svelte-17m9ktp">Optional query parameters :</p> <li>Year : `year=YYYY` 2018 &gt;= YYYY &lt;= 2023</li> <li data-svelte-h="svelte-13eyp0i">Limit: `limit=X` 0 &gt; X &lt;= 100</li> <li data-svelte-h="svelte-1cbholr">Page: `page=X` 0 &gt;= X &lt;= ∞</li></div> <div class="column" data-svelte-h="svelte-j62205"><p class="has-text-left mb-1">API Responses code and format :</p> <li>200 : <span>[{ &quot;timestamp&quot;: &quot;RFC3339 Timestamp String&quot;,
+                    &quot;amount&quot;: &quot;XTZ Amount String&quot;, &quot;delegator&quot;: &quot;Delegator
+                    Address String&quot;, &quot;block&quot;: &quot;Block Height String&quot;
+                    },...]</span></li> <li>400 : <span>{ &quot;message&quot;: &quot;invalid parameter [param]&quot; }</span></li> <li>500 : <span>{ &quot;message&quot;: &quot;something went bad, try again later&quot;
+                    }</span></li></div></div></article> <article class="tile is-child notification is-warning"><h3 class="title">JSON <a target="_blank" href="https://delegationz.fly.dev/xtz/sync">/xtz/sync</a></h3> <p class="subtitle" data-svelte-h="svelte-mvpzmp">Get last synchronized delegation</p> <div class="columns" data-svelte-h="svelte-39gfoi"><div class="column"><p class="has-text-left mb-1">Optional query parameters :</p> <li>NA</li></div> <div class="column"><p class="has-text-left mb-1">API Responses code and format :</p> <li>200 : <span>{ &quot;id&quot;: &quot;Reference API item ID Number&quot;,
+                    &quot;timestamp&quot;: &quot;RFC3339 Timestamp String&quot;, &quot;amount&quot;: &quot;XTZ
+                    Amount String&quot;, &quot;delegator&quot;: &quot;Delegator Address String&quot;,
+                    &quot;block_hash&quot;: &quot;Block Hash String&quot;, &quot;block_level&quot;: &quot;Block
+                    Level Number&quot; }</span></li> <li>500 : <span>{ &quot;message&quot;: &quot;something went bad, try again later&quot;
+                    }</span></li></div></div></article> <article class="tile is-child notification is-info"><h3 class="title">HTTP <a target="_blank" href="https://delegationz.fly.dev/health">/health</a></h3> <p class="subtitle" data-svelte-h="svelte-ougxrr">Check service availability</p></article></div> <div class="tile is-parent" data-svelte-h="svelte-1gfnk83"><article class="tile is-child notification is-info "><p class="title">HTML/CSS/JS... /*</p> <p class="subtitle">Load this application</p> <figure class="image is-4by3"><a href="/"><img alt="app logo" src="/android-chrome-512x512.png"></a></figure></article></div></div></div></div></div> 
+			
+			<script>
+				{
+					__sveltekit_17giigt = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {"PUBLIC_API_HOST":"https://delegationz.fly.dev"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.4f995098.js"),
+						import("./_app/immutable/entry/app.bca9dc3f.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
