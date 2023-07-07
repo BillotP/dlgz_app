@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { PUBLIC_API_HOST } from "$env/static/public";
   import type { DelegationItems } from "../lib/delegation";
+  import { base } from "$app/paths";
 
   const startYear = 2018;
   const yearArray = Array.from(
@@ -18,9 +19,8 @@
   async function doGetDelegations() {
     loading = true;
     try {
-      let host = PUBLIC_API_HOST;
       let bdy = await fetch(
-        `${host}/xtz/delegations?page=${params.page}&limit=${params.limit}&year=${params.year}`
+        `${PUBLIC_API_HOST}/xtz/delegations?page=${params.page}&limit=${params.limit}&year=${params.year}`
       );
       res = await bdy.json();
       loading = false;
@@ -62,10 +62,13 @@
                 <tr>
                   <th>{r.timestamp}</th>
                   <td>
-                    {Number(r.amount).toLocaleString()}
+                    {(Number(r.amount) / 10e5 ).toLocaleString()}
                   </td>
                   <td
-                    >{r.delegator.length > 0 ? r.delegator : "👻 🥖"}
+                    ><a href={`${base}/delegator/stats/${r.delegator}`}
+                      >{`` +
+                        (r.delegator.length > 0 ? r.delegator : "👻 🥖")}</a
+                    >
                     {#if r.delegator.length > 0}
                       <a
                         target="_blank"

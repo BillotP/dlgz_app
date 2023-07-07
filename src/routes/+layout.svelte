@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { base } from '$app/paths';
+  import { base } from "$app/paths";
   import "../app.css";
   onMount(() => {
     // Get all "navbar-burger" elements
@@ -81,16 +81,29 @@
         <div class="field is-grouped">
           <p class="control">
             <a
-              class="button is-secondary"
+              class="button is-grey"
+              target="_blank"
+              href="https://github.com/BillotP/delegationz"
+            >
+              <span class="icon">
+                <i class="fab fa-github" />
+              </span>
+              <span>API</span>
+            </a>
+          </p>
+          <p class="control">
+            <a
+              class="button is-dark"
               target="_blank"
               href="https://github.com/BillotP/dlgz_app"
             >
               <span class="icon">
                 <i class="fab fa-github" />
               </span>
-              <span>Repo</span>
+              <span>APP</span>
             </a>
           </p>
+
         </div>
       </div>
     </div>

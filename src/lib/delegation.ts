@@ -8,3 +8,5 @@ export interface DelegationItem {
   delegator: string;
   block: string;
 }
+
+
