@@ -24,7 +24,9 @@
         `${PUBLIC_API_HOST}/xtz/delegators/stats?year=${year}&kind=${kind}&delegator=${$page.params["address"]}`
       );
       if (bdy.status == 201) {
-        return getDelegatorStats();
+        // return getDelegatorStats();
+        loading = false;
+        return;
       }
       let chk = (await bdy.json()) as DelegatorStatItems;
       res = chk.data[0].value[0];
