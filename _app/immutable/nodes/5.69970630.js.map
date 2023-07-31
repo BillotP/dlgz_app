@@ -1,1 +1,0 @@
-{"version":3,"file":"5.69970630.js","sources":["../../../../../../src/routes/about/+page.svelte"],"sourcesContent":["<div class=\"hero is-primary\">\n  <div class=\"hero-body\">\n    <h1 class=\"title\">About</h1>\n  </div>\n</div>\n"],"names":["insert_hydration","target","div1","anchor"],"mappings":"saAAAA,EAIKC,EAAAC,EAAAC,CAAA"}
