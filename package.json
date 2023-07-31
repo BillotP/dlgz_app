@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"build:fly": "vite build --mode fly",
-		"ship": "vite build --mode fly && cp -r build ../delegationz/pkg/services/frontend && cd ../delegationz && fly deploy",
+		"ship": "vite build --mode fly && cp -r build ../delegationz/pkg/frontend && cd ../delegationz && fly deploy",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"

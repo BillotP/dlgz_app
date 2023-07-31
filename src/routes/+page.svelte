@@ -62,13 +62,12 @@
                 <tr>
                   <th>{r.timestamp}</th>
                   <td>
-                    {(Number(r.amount) / 10e5 ).toLocaleString()}
+                    {(Number(r.amount) / 10e5).toLocaleString()}
                   </td>
                   <td
-                    ><a href={`${base}/delegator/stats/${r.delegator}`}
-                      >{`` +
-                        (r.delegator.length > 0 ? r.delegator : "👻 🥖")}</a
-                    >
+                    ><p>
+                      {`` + (r.delegator.length > 0 ? r.delegator : "👻 🥖")}
+                    </p>
                     {#if r.delegator.length > 0}
                       <a
                         target="_blank"
